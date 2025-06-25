@@ -1,0 +1,9 @@
+# This only houses my custom part of the bashrc
+
+echo "Hello, Loser!"
+echo ""
+echo "   -   -"
+echo "     O"
+echo "    ___"
+echo "   /   \\"
+echo ""

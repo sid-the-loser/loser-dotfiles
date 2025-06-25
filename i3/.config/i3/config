@@ -33,10 +33,12 @@ exec xinput set-prop "MSFT0001:01 04F3:327E Touchpad" "libinput Natural Scrollin
 
 for_window [class="^.*"] border pixel 0
 
-# (added) Gaps between windows
+# (added) flameshot for screenshots
+bindsym $mod+p exec --no-startup-id flameshot gui
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+# (mod) changed font from 'monospace' and front size from 8
 font pango:ComicShannsMono Nerd Font Mono 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
