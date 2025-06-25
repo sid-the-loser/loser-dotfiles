@@ -1,0 +1,57 @@
+general {
+  colors = true
+  color_good = "#a3be8c"
+  color_bad  = "#bf616a"
+  color_degraded = "#ebcb8b"
+  interval = 1
+  separator = "|"
+}
+
+disk "/" {
+  format = "Storage: %percentage_used"
+}
+
+cpu_usage {
+  format = "CPU: %usage"
+}
+
+battery 1 {
+  format = "%status %percentage"
+  low_threshold = 15
+  threshold_type = "percent"
+  last_full_capacity = true
+  hide_seconds = true
+  integer_battery_capacity = true
+  status_chr = "AC"
+  status_bat = "DC"
+}
+
+memory {
+  memory_used_method = classical
+  format="Memory: %used/%total"
+}
+
+
+volume master {
+  format = "Volume: %volume"
+  format_muted = "Volume: muted (%volume)"
+}
+
+wireless wlp0s20f3 {
+  #format_up = "WiFi: (%quality at %essid, %bitrate) %ip" # i dont like seeing my fricking ip address
+  format_up = "WiFi: %quality at %essid, %bitrate"
+  format_down = "WiFi: down"
+}
+
+ethernet enp7s0 {
+  format_up = "Ethernet: %ip (%speed)"
+  format_down = "Ethernet: down"
+}
+
+order += "volume master"
+order += "battery 1"
+order += "cpu_usage"
+order += "memory"
+order += "wireless wlp0s20f3"
+order += "ethernet enp7s0"
+order += "disk /"
