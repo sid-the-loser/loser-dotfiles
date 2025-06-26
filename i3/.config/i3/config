@@ -67,6 +67,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# (added) Multimedia player keys
+# (mod) Made the play button play-pause and removed the pause button function
+# because my laptop only has one button and that is the play button.
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+# bindsym XF86AudioPause exec --no-startup-id playerctl pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
 # (added) Brightness adjusting
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo /usr/bin/brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo /usr/bin/brightnessctl set 10%-
