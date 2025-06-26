@@ -45,7 +45,7 @@ wireless wlp0s20f3 {
 
 ethernet enp7s0 {
   format_up = "Ethernet: %ip (%speed)"
-  format_down = "Ethernet: down"
+  format_down = "Wired: down"
 }
 
 order += "volume master"
